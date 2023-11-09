@@ -45,7 +45,7 @@ int main() {
     }
 
     if (__builtin_cpu_supports("avx")) {
-        puts("using avx2");
-        avx2();
+        puts("using avx");
+        avx();
     }
 }
