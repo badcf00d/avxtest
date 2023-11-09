@@ -13,14 +13,14 @@
 void __attribute__((noreturn)) avx() {
     while (1) {
         repeat("vfmadd132pd xmm0,xmm0,xmm0\n\t" 
-               "vpxord      xmm0,xmm0,xmm0\n\t", 2);
+               "vpxor       xmm0,xmm0,xmm0\n\t", 2);
     }
 }
 
 void __attribute__((noreturn)) avx2() {
     while (1) {
-        repeat("vfmadd132pd ymm0,ymm0,ymm0\n\t" 
-               "vpxord      ymm0,ymm0,ymm0\n\t", 2);
+        repeat("vfmadd213pd ymm0,ymm0,ymm0\n\t" 
+               "vpxor       ymm0,ymm0,ymm0\n\t", 2);
     }
 }
 
